@@ -13,46 +13,51 @@ import javax.persistence.Table;
 
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 
-@Table(name="livro")
+@Table(name = "livro")
 @Entity
 @EntityListeners(AuditingEntityListener.class)
 public class Livro implements Serializable {
-	
+
 	private static final long serialVersionUID = 1L;
-	
+
 	@Id
-	@GeneratedValue(strategy= GenerationType.IDENTITY)  
-	@Column(name="id")
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	@Column(name = "id")
 	private Long id;
-	
-	@Column(name="titulo")
+
+	@Column(name = "titulo")
 	private String titulo;
-	
-	@Column(name="autor")
+
+	@Column(name = "autor")
 	private String autor;
-	
-	@Column(name="genero")
-	private String genero;
-	
-	@Column(name="data_inicio_leitura")
+
+	/*
+	 * @Column(name="genero") private String genero;
+	 */
+
+	@Column(name = "data_inicio_leitura")
 	private Date dataInicioLeitura;
-	
-	@Column(name="data_fim_leitura")
+
+	@Column(name = "data_fim_leitura")
 	private Date dataFimLeitura;
-	
-	@Column(name="resumo")
+
+	@Column(name = "resumo")
 	private String resumo;
-	
+
+	@Column(name = "isbn")
 	private String isbn;
-	
+
+	@Column(name = "editora")
 	private String editora;
-	
+
+	@Column(name = "data_Publicacao")
 	private String dataPublicacao;
-	
-	private int qtdePaginas;
-	
+
+	@Column(name = "qtd_paginas")
+	private int qtdPaginas;
+
+	@Column(name = "imagem")
 	private byte[] imagem;
-	
 
 	public Long getId() {
 		return id;
@@ -77,14 +82,11 @@ public class Livro implements Serializable {
 	public void setAutor(String autor) {
 		this.autor = autor;
 	}
-
-	public String getGenero() {
-		return genero;
-	}
-
-	public void setGenero(String genero) {
-		this.genero = genero;
-	}
+	/*
+	 * public String getGenero() { return genero; }
+	 * 
+	 * public void setGenero(String genero) { this.genero = genero; }
+	 */
 
 	public Date getDataInicioLeitura() {
 		return dataInicioLeitura;
@@ -134,12 +136,12 @@ public class Livro implements Serializable {
 		this.dataPublicacao = dataPublicacao;
 	}
 
-	public int getQtdePaginas() {
-		return qtdePaginas;
+	public int getQtdPaginas() {
+		return qtdPaginas;
 	}
 
-	public void setQtdePaginas(int qtdePaginas) {
-		this.qtdePaginas = qtdePaginas;
+	public void setQtdPaginas(int qtdPaginas) {
+		this.qtdPaginas = qtdPaginas;
 	}
 
 	public byte[] getImagem() {

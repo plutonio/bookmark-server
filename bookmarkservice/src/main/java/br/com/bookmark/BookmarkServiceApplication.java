@@ -6,9 +6,9 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 @SpringBootApplication
 @EnableJpaAuditing
-public class LeitorServiceApplication {
+public class BookmarkServiceApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(LeitorServiceApplication.class, args);
+		SpringApplication.run(BookmarkServiceApplication.class, args);
 	}
 }
