@@ -1,2 +1,2 @@
-# bookmark-service
+# bookmark-server
 Projeto de Estágio II
